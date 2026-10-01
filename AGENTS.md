@@ -5,8 +5,7 @@ programar.
 ## Stack y estructura
 - HTML, CSS y JavaScript puros: sin frameworks, librerías, npm, bundler ni build.
 - `index.html` (estructura), `styles.css` (estilos), `app.js` (lógica y datos).
-- Debe funcionar abriendo `index.html` con doble clic (`file://`): nada de módulos ES
-(`type="module"`), `fetch` a archivos locales ni nada que requiera servidor.
+- Debe funcionar abriendo `index.html` con doble clic (`file://`): nada de módulos ES (`type="module"`), `fetch` a archivos locales ni nada que requiera servidor.
 ## Convenciones
 - Textos de la interfaz en español.
 - Código simple, nombres descriptivos y comentarios solo donde aporten.
@@ -18,6 +17,7 @@ programar.
 - Trabaja siempre con la fecha local del usuario. Nunca uses `toISOString()` ni `new Date("AAAA-MM-DD")`: se interpretan en UTC y desplazan el día.
 - Racha = días consecutivos con al menos 1 sesión que terminan hoy. Si hoy no hay sesión pero ayer sí, la racha sigue viva y se cuenta desde ayer.
 - Mejor racha = la secuencia más larga de días consecutivos con al menos 1 sesión, excluyendo fechas futuras. Se calcula sobre todo el historial, no solo desde hoy.
+- Semana = de lunes a domingo (fecha local). El total semanal suma solo sesiones desde el lunes de la semana actual.
 - Varias sesiones el mismo día cuentan como un solo día. Las fechas futuras no suman.
 ## Forma de trabajar
 - Haz solo lo que se pide: no añadas funcionalidades por tu cuenta.

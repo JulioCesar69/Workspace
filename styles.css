@@ -55,6 +55,12 @@ h2 {
   opacity: 0.9;
 }
 
+.semana {
+  margin-top: 0.25rem;
+  font-size: 0.95rem;
+  opacity: 0.9;
+}
+
 .formulario {
   background: #fff;
   border-radius: 16px;

@@ -72,6 +72,21 @@ function calcularMejorRacha(sesiones) {
   return mejorRacha;
 }
 
+function calcularMinutosSemana(sesiones) {
+  const hoy = new Date();
+  hoy.setHours(0, 0, 0, 0);
+
+  const diaSemana = hoy.getDay();
+  const diasDesdeLunes = diaSemana === 0 ? 6 : diaSemana - 1;
+  const lunes = new Date(hoy);
+  lunes.setDate(lunes.getDate() - diasDesdeLunes);
+  const lunesISO = fechaLocalISO(lunes);
+
+  return sesiones
+    .filter(s => s.fecha >= lunesISO)
+    .reduce((total, s) => total + s.minutos, 0);
+}
+
 function formatearFecha(fechaISO) {
   const [anio, mes, dia] = fechaISO.split('-').map(Number);
   const fecha = new Date(anio, mes - 1, dia);
@@ -91,6 +106,9 @@ function renderizar() {
 
   const mejorRacha = calcularMejorRacha(sesiones);
   document.getElementById('mejor-racha').textContent = `Mejor racha: ${mejorRacha} días 🏆`;
+
+  const minutosSemana = calcularMinutosSemana(sesiones);
+  document.getElementById('minutos-semana').textContent = `Esta semana: ${minutosSemana} min`;
 
   const lista = document.getElementById('lista-sesiones');
   const vacio = document.getElementById('sin-sesiones');

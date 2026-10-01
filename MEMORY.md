@@ -1,6 +1,5 @@
 # MEMORY.md — Diario de Estudio
-Memoria del proyecto entre sesiones. Máximo ~50 líneas: resume o elimina lo que ya no
-aporte.
+Memoria del proyecto entre sesiones. Máximo ~50 líneas: resume o elimina lo que ya no aporte.
 ## Estado actual
 - v1.1 funcionando: registrar sesiones (fecha, tema, minutos), racha actual, mejor racha y lista de sesiones.
 - Datos en localStorage.
@@ -10,6 +9,8 @@ aporte.
 - Mejor racha en la misma tarjeta de la racha actual, en texto más pequeño: la racha actual sigue siendo la protagonista.
 - Mejor racha con 🏆: encaja con el tono motivador de la app.
 - Mejor racha excluye fechas futuras: coherente con la regla de la racha actual.
+- Total semanal en la misma tarjeta de racha, debajo de la mejor racha: mantiene el diseño limpio.
+- Semana empieza en lunes: habitual en España y Latinoamérica.
 ## Aprendizajes y errores a evitar
 - (vacío por ahora)
 ## Próximos pasos
